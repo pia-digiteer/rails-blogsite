@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :site do
+    get "home/index"
+  end
+
   resources :posts
   root to: "posts#index"
   # get "/posts", to: posts_path

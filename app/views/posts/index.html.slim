@@ -1,9 +1,7 @@
-p style="color: green" = notice
+== render "shared/toast", message: notice if notice
 
-h1 Posts
+.my-3 == render "form", post: @post
 
-== render "form", post: @post
-
-#posts.row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3.my-3
+#posts.row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3.mt-2.mb-5
   - @posts.each do |post|
     .col.d-flex = render post

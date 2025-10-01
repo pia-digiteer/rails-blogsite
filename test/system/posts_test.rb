@@ -17,7 +17,7 @@ class PostsTest < ApplicationSystemTestCase
     fill_in "Body", with: @post.body
     fill_in "Likes", with: @post.likes
     fill_in "Shares", with: @post.shares
-    fill_in "Title", with: @post.title
+    # fill_in "Title", with: @post.title
     click_on "Create Post"
 
     assert_text "Post was successfully created"
@@ -31,7 +31,7 @@ class PostsTest < ApplicationSystemTestCase
     fill_in "Body", with: @post.body
     fill_in "Likes", with: @post.likes
     fill_in "Shares", with: @post.shares
-    fill_in "Title", with: @post.title
+    # fill_in "Title", with: @post.title
     click_on "Update Post"
 
     assert_text "Post was successfully updated"

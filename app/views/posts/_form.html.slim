@@ -7,5 +7,7 @@
           li = error.full_message
 
   / = form.text_field :title, class: "form-control", placeholder: "Title", required: true
-  = form.textarea :body, class: "form-control", placeholder: "What's on your mind right now?", required: true
-  = form.submit "Post", class: "btn btn-success px-3 py-1"
+  .shadow-sm.bg-success-subtle.rounded-3.my-2
+    = form.textarea :body, class: "form__post border-0 rounded-top-3 border-bottom-0 form-control", placeholder: "What's on your mind right now?", required: true, rows: 4
+    .form__submit.px-3.py-2.rounded-bottom-3
+      = form.submit "Post", class: "btn btn-success rounded-pill px-3 py-1"

@@ -6,6 +6,7 @@ gem "slim-rails" # html.slin
 gem "devise" # authentication support
 gem "dotenv-rails", groups: [ :development, :test ] # env variables for credentials
 gem "bootstrap", "~> 5.3.0" # utility classes
+gem "mutex_m" # dependency for spring-watcher-listen
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.3"
@@ -61,6 +62,10 @@ group :development, :test do
 end
 
 group :development do
+  # ease server refresh and reload times with preloading
+  gem "spring"
+  gem "spring-watcher-listen", "~> 2.0.0"
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
