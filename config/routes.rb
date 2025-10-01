@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  namespace :site do
+    get "home/index"
+  end
+  get "home/index"
   devise_for :users
-  root to: "site#index"
+  root to: "site/home#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "sassc-rails"
+gem "sprockets-rails"
 gem "slim-rails" # html.slin
 gem "devise" # authentication support
 gem "dotenv-rails", groups: [ :development, :test ] # env variables for credentials
@@ -7,8 +9,6 @@ gem "bootstrap", "~> 5.3.0" # utility classes
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.3"
-# The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem "propshaft"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -20,7 +20,7 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 # Use Dart SASS [https://github.com/rails/dartsass-rails]
-gem "dartsass-rails"
+# gem "dartsass-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
