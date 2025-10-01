@@ -1,0 +1,11 @@
+= form_with(model: post) do |form|
+  - if post.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(post.errors.count, "error")} prohibited this post from being saved:"
+      ul
+        - post.errors.each do |error|
+          li = error.full_message
+
+  / = form.text_field :title, class: "form-control", placeholder: "Title", required: true
+  = form.textarea :body, class: "form-control", placeholder: "What's on your mind right now?", required: true
+  = form.submit "Post", class: "btn btn-success px-3 py-1"
