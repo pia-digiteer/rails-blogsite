@@ -21,7 +21,8 @@ head
 
 body
   = render "shared/navbar"
-  .notice =notice
-  .alert =alert
-  = yield
-  = render "shared/footer"
+  .ps-3.pe-2.bg-light
+    =yield
+    .notice =notice
+    .alert =alert
+    / = render "shared/footer"
