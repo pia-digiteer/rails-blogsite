@@ -64,7 +64,7 @@ end
 group :development do
   # ease server refresh and reload times with preloading
   gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "spring-watcher-listen", "~> 2.1.0"
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
